@@ -28,25 +28,25 @@ The designs were created to the following widths:
 
 ### Typography
 
--title font-weight:900
--body text font-weight: 500
--button font-weight: 700
--plan-title font-weight:900
+- title font-weight:900
+- body text font-weight: 500
+- button font-weight: 700
+- plan-title font-weight:900
 
 ### Screen size: 320px
 
--title font: 20px;
--body-font-size: 16px;
--button font-size: 12px;
+- title font: 20px;
+- body-font-size: 16px;
+- button font-size: 12px;
 
 ### Screen size: 375px
 
--title font: 30 px
--body-font-size: 20px
--button font-size: 16px
+- title font: 30 px
+- body-font-size: 20px
+- button font-size: 16px
 
 ### screen size: 1440px
 
--title font: 32px
--body-font-size: 25px
--button font-size: 20px
+- title font: 32px
+- body-font-size: 25px
+- button font-size: 20px
