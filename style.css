@@ -1,0 +1,220 @@
+/*--Reset CSS--*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*--Atribution-copyright--*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*--Variables--*/
+:root {
+  /*Primary*/
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /*Neutral*/
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Pale-blue-Dark-blue: hsl(223, 47%, 23%);
+  /*-Font size--*/
+  --title-font-size: 1.875rem;
+  --body-font-size: 1.25rem;
+}
+
+body {
+  background-color: var(--Pale-blue);
+  height: 100%;
+  width: 100%;
+  /*--To align in the center*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--Background image--*/
+main::before {
+  background-image: url(images/mobbackground.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+/*--standard spacing--*/
+.margin {
+  margin: 0 2rem 1.25rem;
+}
+/*Card background style*/
+.container {
+  height: 100%;
+  background-color: white;
+  border-radius: 2rem;
+  max-width: 23.43rem;
+  min-width: 20rem;
+  box-shadow: 0 5px 20px 0 hsla(224, 23%, 55%, 0.522);
+}
+
+/*--Top image--*/
+.card_img img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+/*--text style--*/
+.text {
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  font-size: var(--body-font-size);
+  text-align: center;
+}
+
+.text #title {
+  color: var(--Pale-blue-Dark-blue);
+  font-weight: 900;
+  font-size: var(--title-font-size);
+  margin-bottom: 1.25rem;
+}
+
+/*--Plan style--*/
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--Very-pale-blue);
+  border-radius: 1rem;
+  padding: 0.625rem;
+}
+
+.plan_type .annual_plan {
+  color: var(--Pale-blue-Dark-blue);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.plan_type .price {
+  font-size: 1rem;
+}
+
+/*--Button Style--*/
+button {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/*--Change button*/
+.container .plan .change button {
+  color: var(--Bright-blue);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+/*--Bottom button--*/
+.container .button button {
+  width: 100%;
+}
+
+.button .proceed_btn {
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  box-shadow: 0px 20px 40px -18px var(--Bright-blue);
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem 0.75rem;
+  margin-bottom: 1.25rem;
+  transition: 0.3s;
+}
+
+.button .cancel_btn {
+  color: var(--Desaturated-blue);
+  transition: 0.3s;
+}
+
+/*--Hover style--*/
+.container .plan .change button:hover,
+.button .proceed_btn:hover {
+  opacity: 0.75;
+  transform: translateY(-5px);
+}
+
+.button .cancel_btn:hover {
+  color: var(--Pale-blue-Dark-blue);
+  transform: translateY(-5px);
+}
+
+/*--Media queries--*/
+@media (max-width: 320px) {
+  .container {
+    max-width: 18.75rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .text #title {
+    font-size: 1.25rem;
+  }
+
+  .plan_type .annual_plan {
+    font-size: 0.75rem;
+  }
+
+  button {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 800px) {
+  main::before {
+    background-image: url(images/deskbackground.svg);
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 28.125rem;
+  }
+
+  .text {
+    font-size: 1.56rem;
+  }
+
+  .text #title {
+    font-size: 2rem;
+  }
+
+  .plan_type .annual_plan {
+    font-size: 1.25rem;
+  }
+}
