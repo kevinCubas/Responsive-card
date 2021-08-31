@@ -37,7 +37,7 @@ img {
   --Pale-blue-Dark-blue: hsl(223, 47%, 23%);
   /*-Font size--*/
   --title-font-size: 1.875rem;
-  --body-font-size: 1.25rem;
+  --body-font-size: 1rem;
 }
 
 body {
@@ -74,8 +74,9 @@ main::before {
   height: 100%;
   background-color: white;
   border-radius: 2rem;
-  max-width: 23.43rem;
+  max-width: 330px;
   min-width: 20rem;
+  overflow: hidden;
   box-shadow: 0 5px 20px 0 hsla(224, 23%, 55%, 0.522);
 }
 
@@ -174,7 +175,7 @@ button {
 /*--Media queries--*/
 @media (max-width: 320px) {
   .container {
-    max-width: 18.75rem;
+    max-width: 310px;
   }
 
   .text {
@@ -203,7 +204,7 @@ button {
 
 @media (min-width: 1440px) {
   .container {
-    max-width: 28.125rem;
+    max-width: 450px;
   }
 
   .text {
