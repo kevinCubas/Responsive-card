@@ -37,12 +37,12 @@ img {
   --Pale-blue-Dark-blue: hsl(223, 47%, 23%);
   /*-Font size--*/
   --title-font-size: 1.875rem;
-  --body-font-size: 1.25rem;
+  --body-font-size: 1rem;
 }
 
 body {
   background-color: var(--Pale-blue);
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   /*--To align in the center*/
   display: flex;
@@ -71,11 +71,12 @@ main::before {
 }
 /*Card background style*/
 .container {
-  height: 100%;
+  margin: 2rem auto;
   background-color: white;
   border-radius: 2rem;
-  max-width: 23.43rem;
-  min-width: 20rem;
+  max-width: 330px;
+  min-width: 300px;
+  overflow: hidden;
   box-shadow: 0 5px 20px 0 hsla(224, 23%, 55%, 0.522);
 }
 
@@ -111,7 +112,7 @@ main::before {
   padding: 0.625rem;
 }
 
-.plan_type .annual_plan {
+.plan_type .annual_plan h2 {
   color: var(--Pale-blue-Dark-blue);
   font-weight: 900;
   font-size: 1rem;
@@ -132,8 +133,11 @@ button {
 }
 
 /*--Change button*/
-.container .plan .change button {
+.container .plan .change a {
+  font-weight: 700;
   color: var(--Bright-blue);
+  display: block;
+  text-decoration: none;
   text-decoration: underline;
   transition: 0.3s;
 }
@@ -160,7 +164,7 @@ button {
 }
 
 /*--Hover style--*/
-.container .plan .change button:hover,
+.container .plan .change a:hover,
 .button .proceed_btn:hover {
   opacity: 0.75;
   transform: translateY(-5px);
@@ -174,7 +178,7 @@ button {
 /*--Media queries--*/
 @media (max-width: 320px) {
   .container {
-    max-width: 18.75rem;
+    max-width: 310px;
   }
 
   .text {
@@ -202,8 +206,12 @@ button {
 }
 
 @media (min-width: 1440px) {
+  .margin {
+    margin: 2rem 2rem;
+  }
+
   .container {
-    max-width: 28.125rem;
+    max-width: 450px;
   }
 
   .text {
@@ -211,10 +219,12 @@ button {
   }
 
   .text #title {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 
-  .plan_type .annual_plan {
-    font-size: 1.25rem;
+  .plan_type .annual_plan h2,
+  .plan_type .price,
+  button {
+    font-size: 1.56rem;
   }
 }
